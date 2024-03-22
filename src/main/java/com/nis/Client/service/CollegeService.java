@@ -11,17 +11,17 @@ CollegeRepository collegeRepository;
 public College save(College emp) {
 return collegeRepository.save(emp);
 }
-public College getCollege(int id) {
+public College getCollege(long id) {
 return collegeRepository.findById(id).get();
 }
-public College update(int id,College employee) {
+public College update(long id,College employee) {
 	College emps=collegeRepository.findById(id).get();
-	emps.setClg_admin(employee.getClg_admin());
-	emps.setClg_name(employee.getClg_name());
-	emps.setLoc(employee.getLoc());
+	emps.setCollegeAdmin(employee.getCollegeAdmin());
+	emps.setCollegeName(employee.getCollegeName());
+	emps.setLocation(employee.getLocation());
 return collegeRepository.save(emps); 
 }
-public String delete(int id)
+public String delete(long id)
 {
 	collegeRepository.deleteById(id);
 return "Entity deleted" +id;
