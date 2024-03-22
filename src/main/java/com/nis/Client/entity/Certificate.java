@@ -8,7 +8,7 @@ import lombok.Data;
 @Table(name = "certificate")
 public class Certificate {
     @Id
-    private long id;
+    private Long id;
     private int year;
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "college_id", referencedColumnName ="id" )

@@ -10,7 +10,7 @@ import java.time.LocalDate;
 public class Placement {
 
     @Id
-    private long id;
+    private Long id;
     private String name;
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "college_id", referencedColumnName ="id" )

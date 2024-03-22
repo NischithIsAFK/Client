@@ -9,7 +9,7 @@ import lombok.Data;
 public class College {
 	
 	@Id
-	private long id;
+	private Long id;
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "user_id",referencedColumnName = "id")
 	private User collegeAdmin;
