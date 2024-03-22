@@ -4,10 +4,21 @@ import com.nis.Client.entity.Certificate;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 @Repository
 public interface ICertificateRepository extends JpaRepository<Certificate,Long> {
-    public  Certificate addCertificate(Certificate certificate);
-    public  Certificate updateCertificate(Certificate certificate);
-    public  Certificate searchCertificate(long id);
-    public Boolean deleteCertificate(long id);
+     default Certificate addCertificate(Certificate certificate){
+        return save(certificate);
+    }
+
+    default Certificate updateCertificate(Certificate certificate){
+         return save(certificate);
+    }
+    default Optional<Certificate> searchCertificate(long id){
+         return findById(id);
+    }
+    default void deleteCertificate(long id){
+         deleteById(id);
+    }
 }

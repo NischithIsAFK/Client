@@ -8,7 +8,7 @@ import lombok.Data;
 public class Student {
 	
 	@Id
-	private long id;
+	private Long id;
 	private String name;
 	@ManyToOne
 	@JoinColumn(name = "college_id", referencedColumnName = "id")

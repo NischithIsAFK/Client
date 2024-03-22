@@ -6,7 +6,13 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface IUserRepository extends JpaRepository<User,Long> {
-    public User addNewUser(User user);
-    public  User updateUser(User user);
-    public Boolean deleteUser(long id);
+    default User addNewUser(User user){
+        return save(user);
+    }
+    default User updateUser(User user) {
+        return  save(user);
+    }
+    default void deleteUser(long id) {
+        deleteById(id);
+    }
 }
