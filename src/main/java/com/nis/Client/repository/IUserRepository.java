@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
 public interface IUserRepository extends JpaRepository<User,Long> {
     public User addNewUser(User user);
     public  User updateUser(User user);
-    public User deleteUser(long id);
+    public Boolean deleteUser(long id);
 }

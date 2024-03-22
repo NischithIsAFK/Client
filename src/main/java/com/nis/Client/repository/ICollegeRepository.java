@@ -7,6 +7,6 @@ public interface ICollegeRepository extends JpaRepository<College, Long> {
     public  College addCollege(College college);
     public College updateCollege(College college);
     public College searchCollege(long id);
-    public College deleteCollege(long id);
+    public Boolean deleteCollege(long id);
 }
 

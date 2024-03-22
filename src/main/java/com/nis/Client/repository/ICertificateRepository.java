@@ -9,5 +9,5 @@ public interface ICertificateRepository extends JpaRepository<Certificate,Long> 
     public  Certificate addCertificate(Certificate certificate);
     public  Certificate updateCertificate(Certificate certificate);
     public  Certificate searchCertificate(long id);
-    public Certificate deleteCertificate(long id);
+    public Boolean deleteCertificate(long id);
 }
