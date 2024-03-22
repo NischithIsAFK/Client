@@ -16,12 +16,12 @@ public class PlacementServiceImpl implements IPlacementService{
     }
 
     @Override
-    public Placement searchPlacement(long id) {
+    public Placement searchPlacement(Long id) {
         return null;
     }
 
     @Override
-    public Boolean cancelPlacement(long id) {
+    public Boolean cancelPlacement(Long id) {
         return null;
     }
 }

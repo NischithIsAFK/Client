@@ -1,7 +1,8 @@
 package com.nis.Client.repository;
+
+import com.nis.Client.entity.College;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import com.nis.Client.entity.College;
 import org.springframework.util.Assert;
 
 import java.util.Optional;
@@ -17,11 +18,11 @@ public interface ICollegeRepository extends JpaRepository<College, Long> {
         return save(college);
     }
     default Optional<College> searchCollege(Long id) {
-        Assert.notNull(id, "Search by ID should not be null");
+        Assert.notNull(id, "College ID for search should not be null");
         return findById(id);
     }
     default void deleteCollege(Long id) {
-        Assert.notNull(id, "Search by ID should not be null");
+        Assert.notNull(id, "College ID should not be null");
         deleteById(id);
     }
 }

@@ -13,12 +13,12 @@ public class Student {
 	@ManyToOne
 	@JoinColumn(name = "college_id", referencedColumnName = "id")
 	private College college;
-	private long roll;
+	private Long roll;
 	private String course;
 	private int year;
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "certificate_id", referencedColumnName ="id" )
 	private Certificate certificate;
-	private long hallTicketNo;
+	private Long hallTicketNo;
 	
 }

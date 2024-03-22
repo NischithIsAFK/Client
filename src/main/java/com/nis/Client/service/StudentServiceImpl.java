@@ -17,12 +17,12 @@ public class StudentServiceImpl implements IStudentService{
     }
 
     @Override
-    public Student searchStudentById(long id) {
+    public Student searchStudentById(Long id) {
         return null;
     }
 
     @Override
-    public Student searchStudentByHallTicket(long ticketNo) {
+    public Student searchStudentByHallTicket(Long ticketNo) {
         return null;
     }
 
@@ -37,7 +37,7 @@ public class StudentServiceImpl implements IStudentService{
     }
 
     @Override
-    public Boolean deleteStudent(long id) {
+    public Boolean deleteStudent(Long id) {
         return null;
     }
 }

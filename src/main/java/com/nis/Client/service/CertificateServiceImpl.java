@@ -16,12 +16,12 @@ public class CertificateServiceImpl implements ICertificateService{
     }
 
     @Override
-    public Certificate searchCertificate(long id) {
+    public Certificate searchCertificate(Long id) {
         return null;
     }
 
     @Override
-    public Certificate deleteCertificate(long id) {
+    public Certificate deleteCertificate(Long id) {
         return null;
     }
 }

@@ -17,12 +17,12 @@ public class CollegeServiceImpl implements ICollegeService {
     }
 
     @Override
-    public College searchCollege(long id) {
+    public College searchCollege(Long id) {
         return null;
     }
 
     @Override
-    public Boolean deleteCollege(long id) {
+    public Boolean deleteCollege(Long id) {
         return null;
     }
 
